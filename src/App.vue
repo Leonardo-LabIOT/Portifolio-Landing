@@ -1,16 +1,21 @@
 <template>
 	<ion-app>
-		<!-- <ion-router-outlet /> -->
-<router-view/>
+		<router-view />
 	</ion-app>
 </template>
 
 <script setup lang="ts">
-	import { IonApp, IonRouterOutlet } from "@ionic/vue";
+import { IonApp } from "@ionic/vue";
 </script>
 
-<style lang="scss" scoped>
-	* {
-		background: purple;
-	}
+<style lang="scss">
+* {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	-webkit-box-sizing: border-box !important;
+	-moz-box-sizing: border-box !important;
+	box-sizing: border-box !important;
+	flex-wrap: wrap;
+}
 </style>

@@ -23,7 +23,6 @@ import "@ionic/vue/css/display.css";
 
 /* Theme variables */
 import "./theme/global.scss";
-import "./theme/variables.css";
 
 const Pinia = createPinia();
 const app = createApp(App);

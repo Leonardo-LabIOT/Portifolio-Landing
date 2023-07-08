@@ -4,6 +4,7 @@
   "version": "0.0.1",
   "type": "module",
   "scripts": {
+    "this": "npx ionic build && npx cap copy android && npx ionic cap run android --target=Pixel_2_API_33  --livereload --external && vite.cmd build",
     "dev": "vite",
     "build": "vue-tsc && vite build",
     "preview": "vite preview",
@@ -42,5 +43,8 @@
     "vitest": "^0.29.2",
     "vue-tsc": "^1.0.24"
   },
-  "description": "An Ionic project"
+  "resolve": {
+    "extensions": [".js", ".json", ".jsx", ".ts", ".tsx", ".vue"]
+  },
+  "description": "An Ionic Project"
 }

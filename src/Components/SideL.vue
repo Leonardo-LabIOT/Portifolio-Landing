@@ -19,13 +19,13 @@
 		width: 66vw;
 		position: absolute;
 		left: 0;
-		z-index: 31;
+		z-index: 30;
 		backdrop-filter: blur(2px);
 
 	}
 	.inner {
 		width: 60%;
-		height: 60%;
+		height: 100%;
 		font-size: 3rem;
 		background-color: #0ff;
 	}

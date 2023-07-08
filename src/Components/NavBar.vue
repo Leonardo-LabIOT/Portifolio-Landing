@@ -3,7 +3,6 @@
 		<div>
 			<div v-if="_mobile" @click="mobile(false)">Hello World!</div>
 			<div v-else @click="mobile(true)">Olá Mundo!</div>
-			<div v-else @click="mobile(true)">Hello!</div>
 		</div>
 		<div @click="myst.inc()">{{ myst.getCount }}</div>
 	</div>

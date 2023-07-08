@@ -3,25 +3,26 @@ import { RouteRecordRaw } from "vue-router";
 
 const routes: Array<RouteRecordRaw> = [
 	{
-		path: "/",
-		redirect: "/home",
+		path: "/home",
+		redirect: { name: "Home" },
 	},
 	{
-		path: "/home",
-		name: "Home",
-		component: () => import("../../views/HomePage.vue"),
+		path: "/",
+		name: "Page",
+		component: () => import("@/views/Template.vue"),
 		children: [
 			{
-				path: "about",
+				path: "",
+				name: "Home",
+				component: () => import("@/views/Home.vue"),
+			}, {
+				path: "/about",
 				name: "About",
-				component: () => import("../../views/About.vue"),
+				component: () => import("@/views/About.vue"),
 			},
 		],
-	}, {
-		path: "about",
-		name: "About",
-		component: () => import("../../views/About.vue"),
-	}
+	},
+
 ];
 
 const router = createRouter({

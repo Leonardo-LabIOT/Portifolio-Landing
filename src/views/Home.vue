@@ -11,8 +11,11 @@
     display: flex;
     flex-direction: column;
     border: dashed silver 3px;
-    background: #aaf;
+    background: #033;
     // height: 50vmax;
+    font-size: 3vh;
+    font-weight: bold;
+    color: white;
     position: absolute;
     top: 10px;
     left: 10px;

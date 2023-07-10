@@ -1,7 +1,7 @@
 <template>
     <div>
         <div class="home">
-            HOME : {{ platform.toUpperCase() }}
+            HOME : {{ getPlat }}
         </div>
     </div>
 </template>
@@ -10,16 +10,22 @@ import { Capacitor } from '@capacitor/core';
 
 export default {
     setup() {
-        const _platform = <string>Capacitor.getPlatform();
-        return { _platform }
+        const devicePlatform: string = Capacitor.getPlatform() as string;
+        return { devicePlatform }
     },
     data() {
         return {
-            platform: this._platform,
+            platform: this.devicePlatform,
+        }
+    },
+    computed: {
+        getPlat() {
+            return this.platform.toString().toUpperCase()
+                || ""
         }
     },
     async mounted() {
-        // this.platform = Capacitor.getPlatform();
+        // this.platform = await Capacitor.getPlatform().toString;
     },
 }
 </script>

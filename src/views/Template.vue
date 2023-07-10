@@ -2,12 +2,12 @@
 	<ion-page>
 		<!-- <nav-bar /> -->
 		<ion-header :translucent="true">
-			<MyHeader />
+			<MyHeader class="bar header" />
 		</ion-header>
 
-		<ion-content>
+		<ion-content id="container">
 			<!-- :fullscreen="true"> -->
-			<!-- <div id="container"> -->
+			<!-- <div > -->
 
 			<!-- <VueIcon class="icons" /> -->
 			<!-- <Focusable><div v-for="item in 13" :tabindex="item" :key="item">Hello : {{ item }}</div></Focusable> -->
@@ -23,7 +23,7 @@
 			<!-- </div> -->
 		</ion-content>
 		<ion-footer :translucent="true">
-			<MyFooter />
+			<MyFooter class="bar footer" />
 		</ion-footer>
 	</ion-page>
 </template>
@@ -33,7 +33,6 @@ import {
 	IonHeader,
 	IonFooter,
 	IonPage,
-
 	IonIcon,
 } from "@ionic/vue";
 </script>
@@ -61,16 +60,11 @@ export default {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
+	background: #000;
+}
 
-	p {
-		font-size: 1.5rem;
-		line-height: 5rem;
-		color: #8c8c8c;
-		margin: 0;
-		// -webkit-box-shadow: $shadow-def;
-		// -moz-box-shadow: $shadow-def;
-		// box-shadow: $shadow-def;
-	}
+ion-page {
+	background: #ff0;
 }
 
 ion-content {
@@ -88,5 +82,30 @@ ion-content {
 
 ion-footer {
 	position: relative;
+}
+
+$shadow-def: 0 0 10px 5px rgba($color: #f33, $alpha: 0.5);
+
+.bar {
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+	position: relative;
+	height: 100%;
+	width: 100%;
+	margin: 0;
+	padding: 1.25rem;
+	font-size: 1.25em;
+	line-height: 1.5;
+
+	&.footer {
+		font-size: 1.25rem;
+		padding: 1rem;
+	}
+
+	color: #8c8c8c;
+	-webkit-box-shadow: $shadow-def;
+	-moz-box-shadow: $shadow-def;
+	box-shadow: $shadow-def;
 }
 </style>

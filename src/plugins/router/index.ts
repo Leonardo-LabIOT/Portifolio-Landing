@@ -9,16 +9,16 @@ const routes: Array<RouteRecordRaw> = [
 	{
 		path: "/",
 		name: "Page",
-		component: () => import("@/views/Template.vue"),
+		component: () => import("@/Pages/Template.vue"),
 		children: [
 			{
 				path: "",
 				name: "Home",
-				component: () => import("@/views/Home.vue"),
+				component: () => import("@/Pages/Home.vue"),
 			}, {
 				path: "/about",
 				name: "About",
-				component: () => import("@/views/About.vue"),
+				component: () => import("@/Pages/About.vue"),
 			},
 		],
 	},

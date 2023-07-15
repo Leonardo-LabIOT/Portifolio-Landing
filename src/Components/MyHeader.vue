@@ -6,7 +6,13 @@
     <!-- </div> -->
     <div class="conteudo">
         <!-- <ion-title> -->
-        <p><strong> Leonardo Pereira </strong> | Front-End Developer</p>
+        <NavBar />
+
+        <p class="title"><strong> Leonardo Pereira </strong>
+        <p class="subTitle">
+            | Front-End Developer
+        </p>
+        </p>
         <!-- </ion-title> -->
     </div>
 </template>
@@ -15,16 +21,27 @@ import {
     IonTitle,
     IonToolbar,
 } from "@ionic/vue";
-
+import NavBar from "./NavBar.vue";
 export default {
     components: {
         IonTitle,
         IonToolbar,
+        NavBar
     }
 }
 </script>
 <style lang="scss" scoped>
 $shadow-def: 0 0 10px 5px rgba($color: #033, $alpha: 0.5);
 
+.title {
+    display: flex;
+    flex-direction: row;
+    background: #000;
+}
 
+.subTitle {
+    @media (width<680px) {
+        background: red;
+    }
+}
 </style>

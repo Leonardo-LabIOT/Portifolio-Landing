@@ -26,16 +26,13 @@
         eaque, sint magni exercitationem, possimus ea vitae consectetur! Maiores sapiente
         dicta saepe.
       </div>
-      <div>{{ ">> " }}{{ myst2.getCount }}{{ " <<" }}</div>
-      </div>
     </div>
+  </div>
 </template>
 <script lang="ts">
-import { useMyStore } from "@/plugins/store";
 export default {
   setup() {
-    const myst2 = useMyStore();
-    return { myst2 };
+
   },
 };
 </script>

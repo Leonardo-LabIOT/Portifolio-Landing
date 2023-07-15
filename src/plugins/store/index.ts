@@ -1,4 +1,4 @@
-import { myStore } from "./myStore";
+import { myKnow } from "./myKnow";
 // const arquivos = require.context('../../public/img/icons/Stacks/', false, /\.svg$/);
-const useMyStore = myStore;
-export { useMyStore };
+const useMyKnow = myKnow;
+export { useMyKnow };

@@ -8,14 +8,10 @@
 
   <div id="nav-container" v-if="active">
     <div id="nav-bg" @click="active = false" />
-    <div
-      id="nav"
-      @click="
-        () => {
-          console.log('abc');
-        }
-      "
-    >
+    <div id="nav" @click="() => {
+        console.log('abc');
+      }
+      ">
       <div>plat:{{ plat }}</div>
       <div v-if="mobile">itss mobile</div>
 
@@ -36,12 +32,19 @@ export default {
   data() {
     return {
       active: false,
-      mobile: <String>this.platform != "web",
+      mobile: this.isMobile(),
       plat: getPlatforms(),
     };
   },
   methods: {
-    // mobile(aux: boolean) { },
+    isMobile() {
+      return <String>this.platform != "web";
+    },
+  },
+  computed: {
+    // isMobile() {
+    //   return: { this.mobile };
+    // },
   },
 };
 </script>

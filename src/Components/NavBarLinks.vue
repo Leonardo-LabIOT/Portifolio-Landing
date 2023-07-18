@@ -1,16 +1,17 @@
 <template>
   <div id="nav-bar-container">
-    <MenuIcon @click="active = true" />
-
+    <slot v-if="media" />
+    <MenuIcon @click="active = true" v-else />
+  
 
     <div id="nav-bg" v-if="active" @click="active = false" />
     <transition name="menu">
-      <div id="nav-container" v-if="active">
+      <div id="nav-container" @click="active = false" v-if="active">
         <div id="nav">
-          <div>{{ plat }}</div>
-          <div v-if="mobile">itss mobile</div>
-          <div v-else>its not mobile</div>
+          <slot />
+
         </div>
+
       </div>
     </transition>
   </div>
@@ -23,6 +24,7 @@ import { inject } from "vue";
 
 export default {
   components: { IonIcon, MenuIcon },
+  props: { media: Boolean },
   setup() {
     const platform = inject("platform") as String;
     return { platform };
@@ -57,6 +59,7 @@ export default {
 
 #nav {
   display: flex;
+  flex-direction: column;
   width: 67vw;
   max-width: 450px;
   height: 100vh;

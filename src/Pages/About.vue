@@ -1,7 +1,7 @@
 <template>
   <div id="about-container">
     <div class="about">
-      <div>
+      <p class="text">
         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero quidem hic
         recusandae nulla soluta optio doloribus ratione aliquid. Explicabo odio, a eveniet
         corrupti dicta repudiandae laudantium sed mollitia saepe? Sequi! - Lorem ipsum
@@ -25,7 +25,7 @@
         corporis! Dignissimos quia maxime itaque eligendi cupiditate iusto quis rem,
         eaque, sint magni exercitationem, possimus ea vitae consectetur! Maiores sapiente
         dicta saepe.
-      </div>
+      </p>
     </div>
   </div>
 </template>
@@ -40,22 +40,28 @@ export default {
 <style scoped lang="scss">
 #about-container {
   display: flex;
-  position: relative;
   z-index: 5;
-  // justify-content: center;
+justify-self: center;
+align-self: center;
+  justify-content: center;
+  align-items: center;
 }
 
 .about {
   color: black;
   border: dashed silver 3px;
   display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  overflow: scroll;
   height: 50vmax;
   width: 75vw;
-  margin: 3rem;
-  flex-direction: column;
-  align-items: center;
+  // flex-direction: column;
+  font-size: 1rem;
+  color: aquamarine;
 
-  div {
+  .text {
     margin: 24px;
     text-align: justify;
   }

@@ -37,6 +37,10 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+$shadow-def: 0 0 10px 5px rgba($color: #333,
+    $alpha: 0.5,
+  );
+
 #container {
   text-align: center;
   width: 100vw;
@@ -44,6 +48,7 @@ export default {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   background: #000;
   font-size: 50px;
 }
@@ -56,34 +61,30 @@ ion-content {
   position: relative;
 }
 
+ion-footer {
+  position: relative;
+}
+
 #main_router {
   background: #033;
   position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   top: 10px;
   left: 10px;
   right: 10px;
   bottom: 10px;
 }
 
-ion-footer {
-  position: relative;
-}
-
-$shadow-def: 0 0 10px 5px rgba($color: #333,
-    $alpha: 0.5,
-  );
-
 .bar {
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-between;
   position: relative;
   height: 100%;
   width: 100%;
-  margin: 0;
-  padding: 1.25rem;
-  font-size: 1.25em;
-  line-height: 1.5;
+
 
   &.footer {
     font-size: 1.25rem;

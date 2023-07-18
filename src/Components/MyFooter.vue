@@ -1,6 +1,6 @@
 <template>
     <!-- <div id="footer-container"> -->
-    <div class="conteudo">
+    <div id="container">
         <!-- <Ion-title> -->
         <p><strong>Footer</strong></p>
         <!-- </Ion-title> -->
@@ -13,7 +13,11 @@ import { IonTitle } from "@ionic/vue";
 export default {
     components: {
         IonTitle,
-    }
-}
+    },
+};
 </script>
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+#container {
+    z-index: 3;
+}
+</style>

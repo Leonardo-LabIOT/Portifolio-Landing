@@ -1,8 +1,6 @@
 <template>
   <div>
     <div class="home">HOME : {{ getPlat }}</div>
-
-    <div @click="teste">click</div>
   </div>
 </template>
 <script lang="ts">
@@ -22,11 +20,6 @@ export default {
       return this.platform.toString().toUpperCase() || "";
     },
   },
-  methods: {
-    teste() {
-      console.log("=> -> <> >> == ===");
-    },
-  },
 };
 </script>
 
@@ -44,8 +37,7 @@ export default {
   left: 10px;
   right: 10px;
   bottom: 10px;
-  justify-content: center;
-  align-items: center;
+
   text-align: justify;
 }
 </style>

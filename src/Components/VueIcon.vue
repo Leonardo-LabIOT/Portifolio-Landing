@@ -6,6 +6,4 @@
 <script lang="ts" setup>
 import { logoVue } from "ionicons/icons";
 </script>
-<style lang="scss" scoped>
-
-</style>
+<style lang="scss" scoped></style>

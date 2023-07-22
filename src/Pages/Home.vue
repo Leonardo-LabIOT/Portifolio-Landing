@@ -1,18 +1,21 @@
 <template>
   <div>
-    <div class="home">HOME : {{ getPlat }}</div>
+    <div id="home" :class="theme">HOME : {{ getPlat }}</div>
   </div>
 </template>
 <script lang="ts">
+import { useMyPrefs } from "@/plugins/store";
 import { inject } from "vue";
 export default {
   setup() {
     const platform = inject("platform");
-    return { platform };
+    const theme = useMyPrefs()
+    return { platform, theme };
   },
   data() {
     return {
       platform: this.platform,
+      theme: this.theme,
     };
   },
   computed: {
@@ -24,20 +27,28 @@ export default {
 </script>
 
 <style scoped lang="scss">
-.home {
+#home {
   display: flex;
   flex-direction: column;
-  border: dashed silver 3px;
-  background: #055;
+  border: dashed var(--c3) 3px;
+  background-image: var(--gd1);
   font-size: 1.5rem;
   font-weight: bold;
-  color: white;
-  position: absolute;
-  top: 10px;
-  left: 10px;
-  right: 10px;
-  bottom: 10px;
-
   text-align: justify;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  margin: 10px;
+  box-shadow: var(--sd1);
+
+}
+
+
+.teste {
+  width: 250px;
+  height: 250px;
+  box-shadow: 0px 0px 10px 10px red;
+  background: #ff0;
+  color: #000;
 }
 </style>

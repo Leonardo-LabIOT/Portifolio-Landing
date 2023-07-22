@@ -1,17 +1,15 @@
 <template>
   <div id="nav-bar-container">
-    <slot v-if="media" />
-    <MenuIcon @click="active = true" v-else />
-  
-
+    <slot />
+    <!-- comentado para teste retirar linha acima -->
+    <!-- <slot v-if="media" /> -->
+    <!-- <MenuIcon @click="active = true" v-else /> -->
     <div id="nav-bg" v-if="active" @click="active = false" />
     <transition name="menu">
-      <div id="nav-container" @click="active = false" v-if="active">
+      <div id="nav-container" @click="() => active = false" v-if="active">
         <div id="nav">
           <slot />
-
         </div>
-
       </div>
     </transition>
   </div>
@@ -54,18 +52,21 @@ export default {
   bottom: 0;
   background: rgba($color: #000, $alpha: 0.5);
   backdrop-filter: blur(2px);
-  z-index: 25;
+  z-index: 2;
 }
 
 #nav {
   display: flex;
+  flex: 1;
   flex-direction: column;
-  width: 67vw;
+  width: 60vw;
   max-width: 450px;
-  height: 100vh;
-  background: rgba($color: #f0f, $alpha: 1);
+  height: 100%;
+  background: rgba($color: #fff, $alpha: 1);
   color: #fff;
-  z-index: 30;
+  z-index: 2;
+  align-items: center;
+  justify-content: space-between;
 }
 
 #nav-container {
@@ -73,8 +74,8 @@ export default {
   position: fixed;
   align-items: center;
   top: 0;
-  left: 0;
-  z-index: 30;
+  right: 0;
+  z-index: 2;
 }
 
 .menu-enter-active,
@@ -85,7 +86,7 @@ export default {
 .menu-enter-from,
 .menu-leave-to {
   // transform: translateX(-100%);
-  transform: translatex(-100%);
+  transform: translatex(100%);
   // opacity: 0;
 }
 </style>

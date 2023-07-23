@@ -5,6 +5,7 @@
 </template>
 <script lang="ts" setup>
 import { menu } from "ionicons/icons";
+import { IonIcon } from "@ionic/vue";
 </script>
 <style lang="scss" scoped>
 .icon-container {

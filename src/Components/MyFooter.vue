@@ -13,7 +13,7 @@
     </div>
 </template>
 <script lang="ts">
-import { IonTitle } from "@ionic/vue";
+import { IonTitle, IonIcon } from "@ionic/vue";
 
 export default {
     components: {

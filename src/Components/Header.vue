@@ -7,9 +7,7 @@
       <div v-if="media" class="subTitle">|</div>
       <div v-if="media" class="subTitle">Front-End Developer</div>
     </router-link>
-    <!-- retirado para teste -->
-    <!-- <NavBarLinks id="routes-style" v-if="media" :media="media"> -->
-    <NavBarLinks id="routes-style">
+    <NavBarLinks id="routes-style" v-if="media" :media="media">
       <router-link class="route-style" v-for="(route, index) in routes" :to="{ name: route.name }">{{ route.name }}
       </router-link>
       <Toggle-theme />
@@ -89,16 +87,6 @@ $fon: 1.5rem;
 
 }
 
-/*adicionado para teste*/
-@media(max-width: 600px) {
-  #routes-style {
-    justify-content: space-around;
-    flex-wrap: nowrap;
-  }
-}
-
-/* fim adicionado para teste*/
-
 .route-style {
   font-weight: 300;
   font-size: 0.75 * $fon;
@@ -151,5 +139,4 @@ $fon: 1.5rem;
   .center {
     font-size: 5vw;
   }
-}
-</style>
+}</style>

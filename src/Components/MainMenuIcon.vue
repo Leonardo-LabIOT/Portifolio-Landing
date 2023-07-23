@@ -1,14 +1,12 @@
 <template>
 	<div id="main-menu-icon-container">
 		<ion-icon :icon="menu"></ion-icon>
-		<ion-icon aria-hidden="true" slot="start" :ios="bookmarkOutline" :md="bookmarkSharp"></ion-icon>
-		<ion-icon :md="menu"></ion-icon>
 		<div class="a"></div>
 	</div>
 </template>
 <script lang="ts" setup>
 import { IonIcon } from "@ionic/vue";
-import { menu, bookmarkOutline, bookmarkSharp } from "ionicons/icons";
+import { menu } from "ionicons/icons";
 </script>
 <style lang="scss" scoped>
 #main-menu-icon-container {

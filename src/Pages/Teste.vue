@@ -96,8 +96,8 @@ export default {
 
 .chip {
     $x : 250px;
-    width: $s;
-    height: $s;
+    width: $x;
+    height: $x;
 }
 
 .teste:hover {

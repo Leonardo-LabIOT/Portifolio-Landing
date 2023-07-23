@@ -8,7 +8,7 @@
 </template>
 <script lang="ts" setup>
 import { IonIcon } from "@ionic/vue";
-import { menu, bookmarkOutline } from "ionicons/icons";
+import { menu, bookmarkOutline, bookmarkSharp } from "ionicons/icons";
 </script>
 <style lang="scss" scoped>
 #main-menu-icon-container {

@@ -2,6 +2,7 @@
     <div>
         <div class="themeMenu" :class="theme.get_Theme()" @click="theme.set_Theme()">
             <ion-icon :icon="contrastOutline"></ion-icon>
+            <ion-icon :md="contrastOutline"></ion-icon>
         </div>
     </div>
 </template>

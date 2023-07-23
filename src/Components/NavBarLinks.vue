@@ -1,13 +1,14 @@
 <template>
   <div id="nav-bar-container">
-    <slot />
+    <!-- <slot /> -->
     <!-- comentado para teste retirar linha acima -->
-    <!-- <slot v-if="media" /> -->
-    <!-- <MenuIcon @click="active = true" v-else /> -->
+    <slot v-if="media" />
+    <MenuIcon @click="active = true" v-else />
     <div id="nav-bg" v-if="active" @click="active = false" />
     <transition name="menu">
       <div id="nav-container" @click="() => active = false" v-if="active">
         <div id="nav">
+          algo aqui
           <slot />
         </div>
       </div>
@@ -43,6 +44,11 @@ export default {
 };
 </script>
 <style scoped lang="scss">
+#nav-bar-container {
+  color: var(--c2);
+  background: var(--bg2);
+}
+
 #nav-bg {
   display: flex;
   position: fixed;

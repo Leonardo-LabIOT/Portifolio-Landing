@@ -7,17 +7,19 @@
       <div v-if="media" class="subTitle">|</div>
       <div v-if="media" class="subTitle">Front-End Developer</div>
     </router-link>
-    <NavBarLinks id="routes-style" v-if="media" :media="media">
-      <router-link class="route-style" v-for="(route, index) in routes" :to="{ name: route.name }">{{ route.name }}
-      </router-link>
+    <NavBarLinks id="routes-style" :media="media">
+      <!-- <router-link class="route-style" v-for="(route, index) in routes" :to="{ name: route.name }">{{ route.name }}      </router-link> -->
+      <nav-list />
       <Toggle-theme />
     </NavBarLinks>
+
   </div>
 </template>
 <script lang="ts">
 import { IonTitle, IonToolbar } from "@ionic/vue";
 import NavBar from "./NavBar.vue";
 import NavBarLinks from "./NavBarLinks.vue";
+import NavList from "./NavList.vue";
 import ToggleTheme from "./ToggleTheme.vue";
 import MainMenuIcon from "./MainMenuIcon.vue";
 import { RouteRecordRaw } from "vue-router";
@@ -29,6 +31,7 @@ export default {
     NavBarLinks,
     ToggleTheme,
     MainMenuIcon,
+    NavList
   },
   props: { act: Boolean },
   data() {
@@ -139,4 +142,5 @@ $fon: 1.5rem;
   .center {
     font-size: 5vw;
   }
-}</style>
+}
+</style>

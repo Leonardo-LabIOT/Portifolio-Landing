@@ -12,6 +12,9 @@
             </p>
             <div class="a"></div>
         </div>
+        <div class="chip">
+
+        </div>
     </div>
 </template>
 <script lang="ts">
@@ -89,6 +92,12 @@ export default {
     }
 
 
+}
+
+.chip {
+    $x : 250px;
+    width: $s;
+    height: $s;
 }
 
 .teste:hover {

@@ -18,6 +18,7 @@ import { IonTitle, IonIcon } from "@ionic/vue";
 export default {
     components: {
         IonTitle,
+        IonIcon
     },
 };
 </script>

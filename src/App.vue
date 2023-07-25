@@ -9,6 +9,8 @@ import { IonApp } from "@ionic/vue";
 </script>
 
 <style lang="scss">
+@import"@/theme/global.css";
+
 * {
 	margin: 0;
 	padding: 0;
@@ -17,5 +19,7 @@ import { IonApp } from "@ionic/vue";
 	-moz-box-sizing: border-box !important;
 	box-sizing: border-box !important;
 	flex-wrap: wrap;
+	user-select: none;
+
 }
 </style>

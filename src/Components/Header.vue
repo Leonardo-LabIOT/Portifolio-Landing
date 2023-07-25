@@ -8,12 +8,12 @@
       <div v-if="media" class="subTitle">Front-End Developer</div>
     </router-link>
 
-    <nav-bar :media="media" />
+    <nav-menu :media="media" />
   </div>
 </template>
 <script lang="ts">
 import { IonTitle, IonToolbar } from "@ionic/vue";
-import NavBar from "./NavBar.vue";
+import NavMenu from "./NavMenu.vue";
 import ToggleTheme from "./ToggleTheme.vue";
 import MainMenuIcon from "./MainMenuIcon.vue";
 import { RouteRecordRaw } from "vue-router";
@@ -22,7 +22,7 @@ export default {
   components: {
     IonTitle,
     IonToolbar,
-    NavBar,
+    NavMenu,
     ToggleTheme,
     MainMenuIcon,
   },
@@ -64,12 +64,12 @@ export default {
 };
 </script>
 <style lang="scss" scoped>
-$fon: 1.5rem;
+$fon: 1.3rem;
 
 .header-container {
   display: flex;
   flex-direction: row;
-  padding: 1.3rem;
+  padding: 0.5rem 1.3rem;
   font-size: $fon;
   justify-content: space-between;
   align-items: center;
@@ -100,6 +100,7 @@ $fon: 1.5rem;
 
 .center-header {
   font-size: 1.3rem;
+  padding: 1rem 1.3rem;
 
   .title {
     justify-content: center;
@@ -107,9 +108,10 @@ $fon: 1.5rem;
   }
 }
 
-@media (max-width: 400px) {
+@media (max-width: 500px) {
   .center {
     font-size: 5vw;
+
   }
 }
 </style>

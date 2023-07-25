@@ -1,8 +1,10 @@
 <template>
-    <div>
+    <div class="teste-C">
         <div id="teste-container" style="display: flex; place-content: center; ">
             *** Testes ***
         </div>
+        <chip-card>HELLO</chip-card>
+
         <div class="teste" :class="theme.get_Theme()" @click="theme.set_Theme()">{{
             theme.get_Theme()?.toString().toUpperCase() }}
         </div>
@@ -12,19 +14,16 @@
             </p>
             <div class="a"></div>
         </div>
-        <div class="chip">
-
-        </div>
-        <ion-icon src="../../public/img/icons/star.svg" />
+        <ion-icon src="img/icons/star.svg" />
     </div>
 </template>
 <script lang="ts">
 import { useMyPrefs } from '@/plugins/store';
 import { IonIcon } from '@ionic/vue';
-
+import ChipCard from '@/Components/ChipCard.vue';
 
 export default {
-    components: { IonIcon },
+    components: { IonIcon, ChipCard },
     setup() {
         const theme = useMyPrefs();
         return { theme }
@@ -40,7 +39,16 @@ export default {
 #teste-container {
     font-weight: 500;
     font-size: 3rem;
+    display: flex;
+}
 
+.teste-C {
+    display: flex;
+    place-content: center;
+
+    * {
+        margin: 25px;
+    }
 }
 
 .teste {

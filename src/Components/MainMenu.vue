@@ -35,7 +35,7 @@ export default {
     top: 0;
     bottom: 0;
     z-index: 10;
-    backdrop-filter: blur(2px);
+    backdrop-filter: blur(3px);
 
 }
 

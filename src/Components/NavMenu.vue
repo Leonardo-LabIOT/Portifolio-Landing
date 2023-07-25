@@ -1,14 +1,10 @@
 <template>
   <div class="nav-container">
-
-    <!-- <div class="nav-links-bg" v-if="active" @click="active = false" /> -->
     <div class="nav-links" v-if="media">
-      <!-- abc -->
       <router-link class="route-style" v-for="(route, index) in routes" :to="{ name: route.name }">{{ route.name }}
       </router-link>
       <toggle-theme />
     </div>
-
     <div v-else>
       <menu-icon @click="() => active = true" />
       <transition name="nav-links-menu-bg">
@@ -18,8 +14,8 @@
         <div v-if="active" class="nav-links-container">
           <p class="nav-links-title">Navigation</p>
           <hr class="hr1">
-          <!-- abc -->
-          <router-link class="route-style" v-for="(route, index) in routes" :to="{ name: route.name }">{{ route.name }}
+          <router-link class="route-style" @click=" active = false" v-for="(route, index) in routes"
+            :to="{ name: route.name }">{{ route.name }}
           </router-link>
           <toggle-theme class="toggle-theme" />
         </div>
@@ -70,6 +66,7 @@ export default {
   left: 0;
   bottom: 0;
   z-index: 10;
+    backdrop-filter: blur(3px);
 }
 
 .nav-links {
@@ -84,9 +81,11 @@ export default {
   place-content: center;
   color: var(--c2);
   text-decoration: none;
+  font-size: 1rem;
   margin: 10px;
   padding: 5px;
   z-index: 12;
+
   &:hover {
     transform: scale(1.1);
     cursor: pointer;
@@ -109,11 +108,11 @@ export default {
   box-shadow: var(--sd1);
 
   .route-style {
-    background: var(--bg2);
-    // background: var(--gds2);
+    // background: var(--bg2);
+    background: var(--gd1);
     border-radius: 10px;
     box-shadow: var(--sd2);
-    border: 1px solid var(--c2);
+    border: 3px dashed var(--c2);
     width: 60%;
   }
 }
@@ -134,9 +133,11 @@ export default {
   background: var(--gds1);
   border-radius: 3px;
 }
+
 .toggle-theme {
   cursor: pointer;
   margin: 1rem;
+
   &:hover {
     transform: scale(1.1);
   }

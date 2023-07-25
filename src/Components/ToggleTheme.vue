@@ -1,9 +1,10 @@
 <template>
     <div>
         <div class="themeMenu" :class="theme.get_Theme()" @click="theme.set_Theme()">
-            <!-- <ion-icon :icon="contrastOutline"></ion-icon> -->
             <ion-icon :icon="moon" v-if="theme.get_Theme() === 'light'"></ion-icon>
             <ion-icon :icon="sunny" v-else></ion-icon>
+            <!-- <ion-icon :icon="moon"></ion-icon>
+            <ion-icon :icon="sunny"></ion-icon> -->
         </div>
     </div>
 </template>

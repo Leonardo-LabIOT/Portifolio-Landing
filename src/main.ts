@@ -26,6 +26,10 @@ import "@ionic/vue/css/display.css";
 
 const _devicePlatform: string = Capacitor.getPlatform() as string;
 
+if (Capacitor.isPluginAvailable('StatusBar') && Capacitor.getPlatform() === 'android') {
+	Capacitor.Plugins.StatusBar.setOverlaysWebView({ overlay: true });
+}
+
 const Pinia = createPinia();
 const app = createApp(App);
 app.use(IonicVue).use(Router).use(Pinia).provide('platform', _devicePlatform)

@@ -14,7 +14,7 @@ import { menu } from "ionicons/icons";
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	padding: 5px;
+	margin: 0 1rem;
 
 	* {
 		z-index: 2;

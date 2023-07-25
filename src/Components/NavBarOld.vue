@@ -1,15 +1,13 @@
 <template>
   <div id="nav-bar-container">
-    <!-- <slot /> -->
-    <!-- comentado para teste retirar linha acima -->
-    <slot v-if="media" />
-    <MenuIcon @click="active = true" v-else />
+    <MenuIcon @click="active = true" />
     <div id="nav-bg" v-if="active" @click="active = false" />
     <transition name="menu">
-      <div id="nav-container" @click="() => active = false" v-if="active">
+      <div id="nav-container" v-if="active">
         <div id="nav">
-          algo aqui
-          <slot />
+          <div>{{ plat }}</div>
+          <div v-if="mobile">itss mobile</div>
+          <div v-else>its not mobile</div>
         </div>
       </div>
     </transition>
@@ -23,7 +21,6 @@ import { inject } from "vue";
 
 export default {
   components: { IonIcon, MenuIcon },
-  props: { media: Boolean },
   setup() {
     const platform = inject("platform") as String;
     return { platform };
@@ -44,11 +41,6 @@ export default {
 };
 </script>
 <style scoped lang="scss">
-#nav-bar-container {
-  color: var(--c2);
-  background: var(--bg2);
-}
-
 #nav-bg {
   display: flex;
   position: fixed;
@@ -63,24 +55,21 @@ export default {
 
 #nav {
   display: flex;
-  flex: 1;
-  flex-direction: column;
-  width: 60vw;
+  width: 67vw;
   max-width: 450px;
-  height: 100%;
-  background: rgba($color: #fff, $alpha: 1);
+  height: 100vh;
+  background: rgba($color: #f0f, $alpha: 1);
   color: #fff;
   z-index: 2;
-  align-items: center;
-  justify-content: space-between;
 }
+
 
 #nav-container {
   display: flex;
   position: fixed;
   align-items: center;
   top: 0;
-  right: 0;
+  left: 0;
   z-index: 2;
 }
 
@@ -92,7 +81,7 @@ export default {
 .menu-enter-from,
 .menu-leave-to {
   // transform: translateX(-100%);
-  transform: translatex(100%);
+  transform: translatex(-100%);
   // opacity: 0;
 }
 </style>

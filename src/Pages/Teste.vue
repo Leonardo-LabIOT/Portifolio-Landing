@@ -1,7 +1,7 @@
 <template>
     <div>
-        <div id="teste-container">
-            Testes
+        <div id="teste-container" style="display: flex; place-content: center; ">
+            *** Testes ***
         </div>
         <div class="teste" :class="theme.get_Theme()" @click="theme.set_Theme()">{{
             theme.get_Theme()?.toString().toUpperCase() }}
@@ -15,13 +15,16 @@
         <div class="chip">
 
         </div>
+        <ion-icon src="../../public/img/icons/star.svg" />
     </div>
 </template>
 <script lang="ts">
 import { useMyPrefs } from '@/plugins/store';
+import { IonIcon } from '@ionic/vue';
 
 
 export default {
+    components: { IonIcon },
     setup() {
         const theme = useMyPrefs();
         return { theme }
@@ -90,7 +93,6 @@ export default {
         }
 
     }
-
 
 }
 

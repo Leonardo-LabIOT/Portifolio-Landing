@@ -1,6 +1,10 @@
 <template>
   <div>
-    <div id="home" :class="theme">HOME : {{ getPlat }}</div>
+    <div id="home" :class="theme">
+      <div class="destaque">
+        HOME : {{ getPlat }}
+      </div>
+    </div>
   </div>
 </template>
 <script lang="ts">
@@ -30,6 +34,7 @@ export default {
 #home {
   display: flex;
   flex-direction: column;
+  color: var(--c1);
   border: dashed var(--c3) 3px;
   background-image: var(--gd1);
   font-size: 1.5rem;
@@ -43,6 +48,12 @@ export default {
 
 }
 
+.destaque {
+  background: var(--gds2);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
 
 .teste {
   width: 250px;

@@ -15,14 +15,16 @@
   --ct: rgba(025, 025, 025, 0.5);
   --bg1: #fff;
   --bg2: #bbb;
-  --success: #3b3;
-  --error: #b33;
+  --suc: #3b3;
+  --err: #b33;
   --gd1: linear-gradient(135deg, var(--bg2), var(--bg1), var(--bg2));
   --gd2: linear-gradient(135deg, var(--bg1), var(--bg2), var(--bg1));
   --gdr1: radial-gradient(var(--bg1), var(--bg2));
-  --gds1: linear-gradient(135deg, #7d0, #3dd, #a3d);
-  --gds2: linear-gradient(135deg, #260, #033, #516);
-  --sd1: 0px 0px 10px 3px var(--ct);
+  --gds1: linear-gradient(135deg, #290, #077, #719);
+  --gds2: linear-gradient(135deg, #7d0, #3dd, #a3d);
+  --sd1: 0px 0px 10px 5px var(--ct);
+  --sd2: 0px 0px 10px 5px var(--suc);
+  --sd3: 0px 0px 10px 5px var(--err);
   --dest: #3dd;
 }
 .dark {
@@ -32,13 +34,15 @@
   --ct: rgba(125, 125, 125, 0.5);
   --bg1: #000;
   --bg2: #222;
-  --success: #050;
-  --error: #500;
-  --gd1: linear-gradient(135deg, var(--bg2), var(--bg1), var(--bg2));
-  --gd2: linear-gradient(135deg, var(--bg1), var(--bg2), var(--bg1));
+  --suc: #050;
+  --err: #500;
+  --gd1: linear-gradient(-135deg, var(--bg2), var(--bg1), var(--bg2));
+  --gd2: linear-gradient(-135deg, var(--bg1), var(--bg2), var(--bg1));
   --gdr1: radial-gradient(var(--bg1), var(--bg2));
-  --gds1: linear-gradient(-135deg, #260, #033, #516);
-  --gds2: linear-gradient(135deg, #7d0, #3dd, #a3d);
+  --gds1: linear-gradient(-135deg, #290, #077, #719);
+  --gds2: linear-gradient(-135deg, #7d0, #3dd, #a3d);
   --sd1: 0px 0px 10px 5px var(--ct);
+  --sd2: 0px 0px 10px 5px var(--suc);
+  --sd3: 0px 0px 10px 5px var(--err);
   --dest: #3dd;
 }

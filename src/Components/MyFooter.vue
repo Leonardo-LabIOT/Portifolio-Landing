@@ -2,13 +2,13 @@
     <div id="footer-container">
         <strong>Developed with: </strong>
         <div class="tec">
-            <ion-icon src="../../public/img/icons/Stacks/Ionic.svg" />
-            <ion-icon src="../../public/img/icons/Stacks/VueJS.svg" />
-            <ion-icon src="../../public/img/icons/Stacks/TS.svg" />
-            <ion-icon src="../../public/img/icons/Stacks/SASS.svg" />
-            <ion-icon src="../../public/img/icons/Stacks/JS.svg" />
-            <ion-icon src="../../public/img/icons/Stacks/HTML.svg" />
-            <ion-icon src="../../public/img/icons/Stacks/CSS.svg" />
+            <ion-icon src="../img/icons/Stacks/Ionic.svg" />
+            <ion-icon src="../img/icons/Stacks/VueJS.svg" />
+            <ion-icon src="../img/icons/Stacks/TS.svg" />
+            <ion-icon src="../img/icons/Stacks/SASS.svg" />
+            <ion-icon src="@/img/icons/Stacks/JS.svg" />
+            <ion-icon src="@/img/icons/Stacks/HTML.svg" />
+            <ion-icon src="@/img/icons/Stacks/CSS.svg" />
         </div>
     </div>
 </template>
